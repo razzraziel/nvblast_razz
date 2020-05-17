@@ -20,15 +20,12 @@ public class GameObjectBlaster : MonoBehaviour
     {
         CubeAsset.Settings settings = new CubeAsset.Settings();
         settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(1, 1, 1), NvBlastChunkDesc.Flags.NoFlags));
-        settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(1, 2, 1), NvBlastChunkDesc.Flags.NoFlags));
-        settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(2, 3, 2), NvBlastChunkDesc.Flags.NoFlags));
-        settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(1, 1, 1), NvBlastChunkDesc.Flags.SupportFlag));
-        settings.extents = new Vector3(10, 50, 10);
-        settings.staticHeight = 10.0f;
+        settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(4, 4, 4), NvBlastChunkDesc.Flags.NoFlags));
+        settings.depths.Add(new CubeAsset.DepthInfo(new Vector3(2, 2, 2), NvBlastChunkDesc.Flags.SupportFlag));
+        settings.extents = new Vector3(10, 10, 10);
+        settings.staticHeight = 1.0f;
         _thisCubeAsset = CubeAsset.generate(settings);
         _objectToBlastFamily.Initialize(_thisCubeAsset);
         _objectToBlastFamily.transform.localPosition = this.transform.localPosition;
-
     }
-
 }
