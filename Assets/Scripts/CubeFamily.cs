@@ -84,6 +84,7 @@ public class CubeFamily : MonoBehaviour
 
         actor.userData = rigidbody;
         _actors.Add(rigidbody, actor);
+        //Debug.Log("asd " + this.gameObject.name);
     }
 
     private void OnActorDestroyed(NvBlastActor actor)
@@ -121,8 +122,10 @@ public class CubeFamily : MonoBehaviour
         {
             Vector3 localPosition = rb.transform.InverseTransformPoint(position);
             ApplyRadialDamage(_actors[rb], localPosition, minRadius, maxRadius, compressive);
+            //Debug.Log("containskey");
             return true;
         }
+        //Debug.Log("not_containskey");
         return false;
     }
 

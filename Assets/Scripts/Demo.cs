@@ -39,7 +39,9 @@ public class Demo : MonoBehaviour
 
         const float CITY_HALF_SIZE = 200.0f;
         const float SPARSITY = 30.0f;
-        const int BUILDING_COUNT_MAX = 20;
+        //razz
+        //const int BUILDING_COUNT_MAX = 20;
+        const int BUILDING_COUNT_MAX = 0;
         Vector2 pos = new Vector2(-CITY_HALF_SIZE, -CITY_HALF_SIZE);
         float buildingYMax = 0.0f;
         while (pos.y < CITY_HALF_SIZE && totalBuildings < BUILDING_COUNT_MAX)
