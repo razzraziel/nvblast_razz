@@ -1,44 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
-public class GameObjectBlaster : MonoBehaviour
+public class GameObjectGenerator : MonoBehaviour
 {
     private CubeFamily _objectToBlastFamily;
     private CubeAsset _thisCubeAsset;
 
-    private GameObject[] _chunks0;
-
     void Start()
     {
-        /*if (!(_objectToBlastFamily = this.GetComponent<CubeFamily>()))
+        if (!(_objectToBlastFamily = this.GetComponent<CubeFamily>()))
         {
             Debug.Log(this.gameObject.name +  " has no CubeFamily.");
             return;
-        }*/
-
-        //Init();
-
-        _chunks0 = GetChildrenByDepth(this.gameObject, 0);
-        Debug.Log(_chunks0.Length);
-    }
-
-    private GameObject[] GetChildrenByDepth(GameObject parentObj, int depth)
-    {
-        Chunks[] chunks;
-        chunks = GetComponentsInChildren<Chunks>(true);
-        List<GameObject> tempList = new List<GameObject>();
-
-        for (int i = 0; i < chunks.Length; i++)
-        {
-            if (chunks[i].depth == depth)
-            {
-                tempList.Add(chunks[i].gameObject);
-            }
         }
 
-        GameObject[] childArray = new GameObject[tempList.Count];
-        childArray = tempList.ToArray();
-        return childArray;
+        Init();
     }
     
     private void Init()
