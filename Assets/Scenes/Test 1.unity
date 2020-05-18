@@ -710,12 +710,12 @@ GameObject:
   - component: {fileID: 954508630}
   - component: {fileID: 954508632}
   m_Layer: 0
-  m_Name: BizimCube
+  m_Name: PrefracturedCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &954508630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,7 +869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1200114269
 MonoBehaviour:
   m_ObjectHideFlags: 0
