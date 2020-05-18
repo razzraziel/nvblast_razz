@@ -10,7 +10,7 @@ public class Demo : MonoBehaviour
     {
 		//NativeLoader.Load();
 
-		// generateCity();
+		generateCity();
     }
 
     private void generateCity()
@@ -74,8 +74,7 @@ public class Demo : MonoBehaviour
         foreach (var hit in hits)
         {
             var rb = hit.GetComponentInParent<Rigidbody>();
-            var family = hit.GetComponentInParent<GameObjectBlaster>();//zgr
-            // var family = hit.GetComponentInParent<CubeFamily>();
+            var family = hit.GetComponentInParent<CubeFamily>();
             if (rb != null && family != null)
             {
                 family.ApplyRadialDamage(rb, position, minRadius, maxRadius, compressive);
